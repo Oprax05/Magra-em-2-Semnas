@@ -19,12 +19,17 @@
             overflow: hidden;
         }
         .video-container {
-            position: absolute;
-            top: 0;
-            left: 0;
+            position: relative;
+            width: 90%; /* Ajuste a largura para 90% da tela */
+            max-width: 1200px; /* Defina um limite máximo de largura para telas grandes */
+            height: auto;
+            border: 20px solid black; /* Bordas pretas ao redor do vídeo */
+            overflow: hidden;
+        }
+        .video-container iframe {
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            object-fit: cover; /* Garante que o vídeo cubra todo o espaço disponível */
         }
         .overlay {
             position: absolute;
@@ -38,26 +43,4 @@
             position: absolute;
             color: white;
             font-size: 2rem;
-            text-align: center;
-            z-index: 2;
-        }
-    </style>
-</head>
-<body>
-    <div class="video-container">
-        <div id="vid_67ab672fcf0a967defd1b268" style="position: relative; width: 100%; padding: 56.25% 0 0;"> 
-            <img id="thumb_67ab672fcf0a967defd1b268" src="https://images.converteai.net/3e91e33e-48ea-4a70-bb58-1429de46f892/players/67ab672fcf0a967defd1b268/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> 
-            <div id="backdrop_67ab672fcf0a967defd1b268" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> 
-        </div> 
-        <script type="text/javascript" id="scr_67ab672fcf0a967defd1b268"> 
-            var s=document.createElement("script"); 
-            s.src="https://scripts.converteai.net/3e91e33e-48ea-4a70-bb58-1429de46f892/players/67ab672fcf0a967defd1b268/player.js", 
-            s.async=!0,document.head.appendChild(s); 
-        </script>
-    </div>
-    <div class="overlay"></div>
-    <div class="content">
-        <h1>Bem-vindo à nossa Landing Page</h1>
-    </div>
-</body>
-</html>
+            text-align:
