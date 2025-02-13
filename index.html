@@ -21,15 +21,29 @@
         .video-container {
             position: relative;
             width: 90%; /* Ajuste a largura para 90% da tela */
-            max-width: 1200px; /* Defina um limite máximo de largura para telas grandes */
-            height: auto;
+            max-width: 1200px; /* Limite de largura para telas grandes */
+            height: 0;
+            padding-bottom: 56.25%; /* Proporção 16:9 */
             border: 20px solid black; /* Bordas pretas ao redor do vídeo */
             overflow: hidden;
+            background-color: black;
         }
-        .video-container iframe {
+        .video-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Garante que o vídeo cubra todo o espaço disponível */
+            object-fit: cover;
+            display: block;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
         .overlay {
             position: absolute;
@@ -43,4 +57,13 @@
             position: absolute;
             color: white;
             font-size: 2rem;
-            text-align:
+            text-align: center;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <!-- Contêiner do vídeo com a imagem inicial e o script de player -->
+        <div id="vid_67ab672fcf0a967defd1b268" style="position: relative; width: 100%; padding: 56.25% 0 0;"> 
+            <img id="thumb_67ab672fcf0a967defd1b268" src="https://images.converteai.net/3e91e33e-48ea-4a70-bb58-1429de46f892/players/67ab672fcf0a967def
