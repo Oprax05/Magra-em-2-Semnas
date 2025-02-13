@@ -64,6 +64,29 @@
 </head>
 <body>
     <div class="video-container">
-        <!-- Contêiner do vídeo com a imagem inicial e o script de player -->
+        <!-- Aqui está o contêiner do vídeo com a miniatura e o player -->
         <div id="vid_67ab672fcf0a967defd1b268" style="position: relative; width: 100%; padding: 56.25% 0 0;"> 
-            <img id="thumb_67ab672fcf0a967defd1b268" src="https://images.converteai.net/3e91e33e-48ea-4a70-bb58-1429de46f892/players/67ab672fcf0a967def
+            <img id="thumb_67ab672fcf0a967defd1b268" src="https://images.converteai.net/3e91e33e-48ea-4a70-bb58-1429de46f892/players/67ab672fcf0a967defd1b268/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> 
+            <div id="backdrop_67ab672fcf0a967defd1b268" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> 
+        </div>
+        
+        <!-- Script para carregar o player quando o vídeo for clicado -->
+        <script type="text/javascript" id="scr_67ab672fcf0a967defd1b268">
+            document.getElementById('vid_67ab672fcf0a967defd1b268').addEventListener('click', function() {
+                var iframe = document.createElement('iframe');
+                iframe.src = "https://www.youtube.com/embed/SEU_CODIGO_DO_VIDEO?autoplay=1";  // Substitua pelo link do seu vídeo
+                iframe.frameborder = "0";
+                iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+                iframe.allowfullscreen = true;
+                this.innerHTML = '';  // Limpar o conteúdo anterior (imagem de miniatura e filtro)
+                this.appendChild(iframe);  // Adiciona o iframe
+            });
+        </script>
+    </div>
+    
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Bem-vindo à nossa Landing Page</h1>
+    </div>
+</body>
+</html>
